@@ -71,13 +71,13 @@ output "kube_config" {
 
 #Cria o ACR
 resource "azurerm_container_registry" "unyleya_acr" {
-  name                = "containerRegistry1"
+  name                = "unyleyaContainerRegistryAlpha"
   resource_group_name = azurerm_resource_group.unyleya.name
   location            = azurerm_resource_group.unyleya.location
   sku                 = "Premium"
   admin_enabled       = false
   georeplications {
-    location                = "West US"
+    location                = "East US 2"
     zone_redundancy_enabled = true
     tags                    = {}
   }
